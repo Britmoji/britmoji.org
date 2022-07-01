@@ -5,28 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Britmoji Inc</title>
+
     <script src="https://cdn.jsdelivr.net/npm/hiccupfx@1.1.1/hiccupfx-min.js"></script>
 
     <meta property="og:title" content="Britmoji Inc"/>
     <meta property="og:url" content="https://github.com/britmoji"/>
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/806461073199988737/992165458050547782/IMG_9670.jpg"/>
+    <meta property="og:image"
+          content="https://cdn.discordapp.com/attachments/806461073199988737/992165458050547782/IMG_9670.jpg"/>
+    <meta property="twitter:image:src"
+          content="https://cdn.discordapp.com/banners/662109704549433380/78279ea8e98e0fdcbdb5748c2952b9bb.png?size=1024"/>
+    <meta property="twitter:card" content="summary_large_image"/>
 </head>
 <style>
     * {
-        color:white;
+        color: white;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
     }
 
     body {
-        background-color: black;
+        background: black;
+    }
+
+    img {
+        pointer-events: none;
+    }
+
+    #tv-screen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
     }
 </style>
 <body>
+<div>
     <h1>Welcome to Britmoji Inc</h1>
+    <p>home of the world's most "special" developers</p>
+
     <span title="GitHub">
         <a href="https://github.com/britmoji">GitHub</a>
     </span>
     <span title="Email">
         <a href="mailto:hello@zerite.dev">Email</a>
     </span>
+
+    <br/>
+    <br/>
+
+    <img src="https://cdn.discordapp.com/banners/662109704549433380/78279ea8e98e0fdcbdb5748c2952b9bb.png?size=1024" alt="britmoji"/>
+    <br/>
+    <img src="https://stryvemarketing.com/wp-content/uploads/2016/04/flamingline.gif" alt="britmoji"/>
+
+    <canvas id="tv-screen"></canvas>
+    <script src="js/britmoji.js"></script>
+</div>
 </body>
 </html>
