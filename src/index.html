@@ -27,9 +27,9 @@
         background: black;
     }
 
-    img {
-        pointer-events: none;
-    }
+    /*img {*/
+    /*    pointer-events: none;*/
+    /*}*/
 
     #tv-screen {
         position: absolute;
@@ -38,6 +38,15 @@
         width: 100vw;
         height: 100vh;
         z-index: -1;
+    }
+
+    .mogy {
+        transition: all .2s ease-in-out;
+        z-index: 10;
+    }
+
+    .mogy:hover {
+        transform: translate(100px, -100px) scale(50);
     }
 </style>
 <body>
@@ -59,7 +68,12 @@
     <br/>
     <img src="https://stryvemarketing.com/wp-content/uploads/2016/04/flamingline.gif" alt="britmoji"/>
 
+    <div style="height: 69.42vh;"></div>
+    <img src="https://i.redd.it/l9yyp0hhliu51.png" alt="britmoji" height="20" class="mogy" />
+    <p style="font-size: 10px; color: #333333">when sus</p>
+
     <canvas id="tv-screen"></canvas>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/britmoji.js"></script>
 </div>
 </body>
