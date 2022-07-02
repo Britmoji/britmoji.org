@@ -44,6 +44,7 @@ let dvd = {
 (function main() {
     canvas = document.getElementById("tv-screen");
     ctx = canvas.getContext("2d");
+
     dvd.img.src = 'https://media.discordapp.net/stickers/902594793266356284.png?size=512';
 
     //Draw the "tv screen"
@@ -66,6 +67,11 @@ function onClick(e) {
         phrase: phrases[Math.floor(Math.random() * phrases.length)],
         color: randColor()
     });
+
+    // Check if they click on the logo
+    if (x > dvd.x && x < dvd.x + dvd.img.width * scale && y > dvd.y && y < dvd.y + dvd.img.height * scale) {
+        window.location.pathname = "/run.html";
+    }
 }
 
 function update() {
