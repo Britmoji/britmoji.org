@@ -171,3 +171,25 @@ function handle(delta) {
         scrollTop: $(window).scrollTop() - (distance * delta)
     }, time);
 }
+
+const randomizeCapitalization = (str) => {
+    return str.split('').map(c => {
+        let result = Math.random() > 0.5 ? c.toUpperCase() : c.toLowerCase();
+        if (Math.random() > 0.9) result += " ";
+        return result;
+    }).join('');
+}
+
+const funnyElements = {
+    "notes": "notes!!!",
+    "britmoji-inc": "Britmoji Inc.",
+}
+
+setInterval(() => {
+    for (let id in funnyElements) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.innerHTML = randomizeCapitalization(funnyElements[id]);
+        }
+    }
+}, 500);
