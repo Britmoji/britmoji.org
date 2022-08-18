@@ -43,6 +43,8 @@ let dvd = {
 
 (function main() {
     canvas = document.getElementById("tv-screen");
+    if (!canvas) return;
+
     ctx = canvas.getContext("2d");
 
     dvd.img.src = 'https://media.discordapp.net/stickers/902594793266356284.png?size=512';
@@ -183,6 +185,7 @@ const randomizeCapitalization = (str) => {
 const funnyElements = {
     "notes": "notes!!!",
     "britmoji-inc": "Britmoji Inc.",
+    "peep": "ayo peep this one!!!"
 }
 
 setInterval(() => {
