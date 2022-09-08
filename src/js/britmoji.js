@@ -57,7 +57,6 @@ let dvd = {
 
     onHit();
     update();
-    theOnePiece();
 })();
 
 function onClick(e) {
@@ -75,6 +74,8 @@ function onClick(e) {
     if (x > dvd.x && x < dvd.x + dvd.img.width * scale && y > dvd.y && y < dvd.y + dvd.img.height * scale) {
         window.location.pathname = "/run.html";
     }
+    
+    theOnePiece();
 }
 
 function update() {
@@ -198,11 +199,11 @@ setInterval(() => {
     }
 }, 500);
 
-async function theOnePiece() {
+function theOnePiece() {
     const audio = new Audio("https://cdn.discordapp.com/attachments/392884654333493269/1016833949621817424/can_we_get_much_higher_sound_effect.mp3")
     audio.type = "audio/mp3"
     try {
-        await audio.play()
+        audio.play()
     } catch (e) {
         console.log(e)
     }
