@@ -30,7 +30,8 @@ const phrases = [
     "calling all oomfies",
     "@oomfies",
     "hi oomfies",
-    createImage("https://media.discordapp.net/stickers/983690705727815731.webp?size=160")
+    createImage("https://media.discordapp.net/stickers/983690705727815731.webp?size=160"),
+    createImage("https://pbs.twimg.com/media/FcJpjQMWQAEI31Z?format=jpg&name=orig")
 ];
 
 let dvd = {
