@@ -203,7 +203,7 @@ setInterval(() => {
 }, 500);
 
 function theOnePiece() {
-	const audio = new Audio("https://cdn.discordapp.com/attachments/392884654333493269/1016833949621817424/can_we_get_much_higher_sound_effect.mp3");
+	const audio = new Audio("https://cdn.discordapp.com/attachments/806461073199988737/1023171116312830104/Vine_Boom_Sound_Effect_Longer_Verison_For_Real.mp3");
 	audio.type = "audio/mp3";
 	try {
 		audio.play();
