@@ -31,7 +31,8 @@ const phrases = [
 	"@oomfies",
 	"hi oomfies",
 	createImage("https://media.discordapp.net/stickers/983690705727815731.webp?size=160"),
-	createImage("https://pbs.twimg.com/media/FcJpjQMWQAEI31Z?format=jpg&name=orig")
+	createImage("https://pbs.twimg.com/media/FcJpjQMWQAEI31Z?format=jpg&name=orig"),
+	"fern was here :>"
 ];
 
 let dvd = {
@@ -43,8 +44,6 @@ let dvd = {
 };
 
 (function main() {
-	Notification.requestPermission();
-
 	canvas = document.getElementById("tv-screen");
 	if (!canvas) return;
 
@@ -63,6 +62,7 @@ let dvd = {
 })();
 
 function onClick(e) {
+	if (Notification.permission === 'default') {Notification.requestPermission();}
 	const x = e.clientX;
 	const y = e.clientY;
 	clicks.push({
