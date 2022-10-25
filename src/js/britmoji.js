@@ -32,7 +32,7 @@ const phrases = [
 	"hi oomfies",
 	createImage("https://media.discordapp.net/stickers/983690705727815731.webp?size=160"),
 	createImage("https://pbs.twimg.com/media/FcJpjQMWQAEI31Z?format=jpg&name=orig"),
-	"fern was here :>"
+	createImage("https://cdn.discordapp.com/attachments/750149098492919920/1034246067262328985/93B213DA-A819-4B2D-8EF5-03E887511BD6_1_102_o.jpeg?size=160") //My cat actual
 ];
 
 let dvd = {
