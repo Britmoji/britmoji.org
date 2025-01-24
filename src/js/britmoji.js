@@ -32,7 +32,7 @@ const phrases = [
 	"hi oomfies",
 	createImage("https://media.discordapp.net/stickers/983690705727815731.webp?size=160"),
 	createImage("https://pbs.twimg.com/media/FcJpjQMWQAEI31Z?format=jpg&name=orig"),
-	createImage("https://cdn.discordapp.com/attachments/750149098492919920/1034246067262328985/93B213DA-A819-4B2D-8EF5-03E887511BD6_1_102_o.jpeg?size=160") //My cat actual
+	createImage("https://files.catbox.moe/j30nqx.jpeg") //My cat actual
 ];
 
 let dvd = {
@@ -203,7 +203,7 @@ setInterval(() => {
 }, 500);
 
 function theOnePiece() {
-	const audio = new Audio("https://cdn.discordapp.com/attachments/806461073199988737/1023171116312830104/Vine_Boom_Sound_Effect_Longer_Verison_For_Real.mp3");
+	const audio = new Audio("https://files.catbox.moe/13o6gt.mp3");
 	audio.type = "audio/mp3";
 	try {
 		audio.play();
