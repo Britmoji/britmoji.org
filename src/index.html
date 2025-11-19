@@ -18,6 +18,8 @@
 <style>
     body {
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(https://files.catbox.moe/v08be7.jpg);
+        background-attachment: fixed;
+        overflow-x: hidden;
     }
 
     #tv-screen {
@@ -38,12 +40,27 @@
     .mogy:hover {
         transform: translate(100px, -100px) scale(50);
     }
+
+    /* EXTRA TERRIBLE EFFECTS */
+    h2 {
+        text-shadow: 2px 2px red, -2px -2px cyan;
+        color: hotpink;
+    }
+
+    marquee {
+        font-weight: 900 !important;
+        text-shadow: 2px 2px 0 black;
+    }
 </style>
 <body>
+<marquee behavior="scroll" direction="left" scrollamount="20" style="font-size: 48px; background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet); color: white; font-weight: bold;">🔥🔥🔥 WELCOME TO THE MOST EPIC WEBSITE EVER CREATED IN THE HISTORY OF THE INTERNET 🔥🔥🔥</marquee>
+<marquee behavior="alternate" direction="right" scrollamount="15" style="font-size: 36px; color: lime;">⚡⚡⚡ UNDER CONSTRUCTION ⚡⚡⚡</marquee>
 <div>
     <h1>Welcome to <span id="britmoji-inc" class="rainbow">Britmoji Inc</span></h1>
+    <marquee behavior="scroll" direction="up" scrollamount="5" style="height: 100px; color: yellow; font-size: 24px;">SCROLLING TEXT SCROLLING TEXT SCROLLING TEXT</marquee>
     <p>home of the world's most "special" developers</p>
-
+    <p style="font-size: 36px; color: red; text-shadow: 2px 2px yellow;">🚨 REVOLUTIONARY WEB DESIGN 🚨</p>
+    <br/>
     <a href="awesome-memes.html" class="rainbow">check our our cool memes !!!</a>
 
     <span title="GitHub">
@@ -73,13 +90,33 @@
                 margin: 0 0 0 -1em;
                 content: '\2022';}
         </style>
+        <br/>
+        <img src="https://web.archive.org/web/20091027105019/http://geocities.com/SiliconValley/Lakes/2399/now.gif" alt="UNDER CONSTRUCTION"/>
+        <img src="https://web.archive.org/web/20091027123954/http://geocities.com/SiliconValley/Lakes/2399/new.gif" alt="NEW"/>
+        <img src="https://web.archive.org/web/20091027073010/http://www.geocities.com/SiliconValley/Lakes/2399/fire.gif" alt="HOT"/>
+        <br/>
+        <marquee behavior="alternate" style="color: cyan; font-size: 32px;">✨✨✨ VISITOR COUNTER: 999999999999 ✨✨✨</marquee>
         <h1 class="rainbow" id="notes">note s</h1>
         <ul>
             <li>hi vinny gaming (from tommy innit . com)</li>
             <li>cf pages bad (sopmetimes )</li>
             <li>hi dean (dean gaming ((from mine craftiest)) )</li>
             <li id="ferntag">fern was here :></li>
+            <li style="color: magenta; font-size: 32px;">🎉 BEST VIEWED IN INTERNET EXPLORER 6 🎉</li>
+            <li style="color: orange;">⭐ OPTIMIZED FOR 800x600 RESOLUTION ⭐</li>
         </ul>
+    </div>
+
+    <div style="text-align: center; margin: 20px;">
+        <h2 style="color: hotpink; font-size: 48px; text-decoration: underline overline; animation: spin 2s infinite;">🎊 AWARDS WE DEFINITELY WON 🎊</h2>
+        <p style="font-size: 28px; color: lime;">⭐⭐⭐⭐⭐ BEST WEBSITE 1996 ⭐⭐⭐⭐⭐</p>
+        <p style="font-size: 28px; color: yellow;">🏆 GEOCITIES HALL OF FAME 🏆</p>
+        <marquee behavior="scroll" direction="down" scrollamount="3" style="height: 150px; color: aqua; font-size: 20px;">
+            ⬇️ SCROLL DOWN FOR MORE EPIC CONTENT ⬇️<br/>
+            👇 DON'T MISS OUT 👇<br/>
+            ⬇️ KEEP SCROLLING ⬇️<br/>
+            👇 ALMOST THERE 👇
+        </marquee>
     </div>
 
     <div style="height: 69.42vh;"></div>
@@ -90,6 +127,49 @@
     <canvas id="tv-screen"></canvas>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/britmoji.js"></script>
+
+    <script>
+        // Tastefully terrible mode
+
+        // Rainbow page title that changes every 2 seconds
+        const titles = [
+            '🔥 BRITMOJI INC 🔥',
+            '✨ EPIC WEBSITE ✨',
+            '💀 UNDER CONSTRUCTION 💀',
+            '🎉 BEST SITE EVER 🎉',
+            '⚡ WELCOME ⚡',
+            '🌈 BRITMOJI 🌈'
+        ];
+        let titleIndex = 0;
+        setInterval(() => {
+            document.title = titles[titleIndex];
+            titleIndex = (titleIndex + 1) % titles.length;
+        }, 2000);
+
+        // Subtle sparkle trail (less aggressive)
+        let lastSparkle = 0;
+        document.addEventListener('mousemove', (e) => {
+            const now = Date.now();
+            if (now - lastSparkle < 100) return; // Throttle to every 100ms
+            lastSparkle = now;
+
+            const trail = document.createElement('div');
+            trail.textContent = '✨';
+            trail.style.position = 'fixed';
+            trail.style.left = e.clientX + 'px';
+            trail.style.top = e.clientY + 'px';
+            trail.style.fontSize = '16px';
+            trail.style.pointerEvents = 'none';
+            trail.style.zIndex = '9999';
+            trail.style.transition = 'opacity 1s';
+            document.body.appendChild(trail);
+
+            setTimeout(() => {
+                trail.style.opacity = '0';
+                setTimeout(() => trail.remove(), 1000);
+            }, 50);
+        });
+    </script>
 </div>
 </body>
 </html>

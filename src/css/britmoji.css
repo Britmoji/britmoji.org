@@ -4,49 +4,42 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    cursor: default;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><text y="32" font-size="32">💩</text></svg>'), auto;
+    font-family: 'Comic Sans MS', 'Papyrus', 'Brush Script MT', cursive, fantasy !important;
+}
+
+h1 {
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ffff00;
+    font-size: 72px !important;
+}
+
+p {
+    text-decoration: underline wavy;
+}
+
+a {
+    font-weight: 900;
+    font-size: 24px;
+    color: cyan;
+}
+
+img {
+    filter: saturate(200%);
 }
 
 /* fond of the gays */
 .rainbow {
-    animation: rainbow 3s infinite;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-@keyframes rainbow {
-    100%, 0% {
-        color: rgb(255, 0, 0);
-    }
-    8% {
-        color: rgb(255, 127, 0);
-    }
-    16% {
-        color: rgb(255, 255, 0);
-    }
-    25% {
-        color: rgb(127, 255, 0);
-    }
-    33% {
-        color: rgb(0, 255, 0);
-    }
-    41% {
-        color: rgb(0, 255, 127);
-    }
-    50% {
-        color: rgb(0, 255, 255);
-    }
-    58% {
-        color: rgb(0, 127, 255);
-    }
-    66% {
-        color: rgb(0, 0, 255);
-    }
-    75% {
-        color: rgb(127, 0, 255);
-    }
-    83% {
-        color: rgb(255, 0, 255);
-    }
-    91% {
-        color: rgb(255, 0, 127);
-    }
+li {
+    list-style-type: '💀';
+    font-size: 20px;
+}
+
+ul {
+    margin: 20px 0;
 }
